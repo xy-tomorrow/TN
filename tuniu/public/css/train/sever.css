@@ -1,0 +1,124 @@
+.sever {
+    height: 217px;
+    padding-top: 1px;
+    background-color: #f5f5f5;
+}
+
+.sever1 .listli1 {
+    width: 250px;
+    margin-top: 20px;
+    margin-left: 100px;
+    float: left;
+}
+.sever1 li i {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url("../../images/train/common_foot_2.png");
+    
+}
+.sever1 li dl {
+    padding-left: 50px;
+}
+
+.sever1 li dl dt {
+    font-size: 16px;
+    margin-top: -27px;
+    margin-bottom: 9px;
+}
+
+.sever1 li dl dd p a {
+    display: inline-block;
+    width: 55px;
+    height: 12px;
+    margin-right: 7px;
+}
+
+.sever1 .listli2 {
+    width: 170px;
+    height: 170px;
+    margin-top: 20px;
+    border-left: 1px dashed #ccc;
+    float: left;
+    padding-left: 20px;
+}
+
+.sever1 .listli2 i {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url("../../images/train/common_foot_2.png") no-repeat -40px 0;
+ 
+}
+
+.sever1 .listli3 {
+    width: 170px;
+    height: 170px;
+    margin-top: 20px;
+    border-left: 1px dashed #ccc;
+    float: left;
+    padding-left: 20px;
+}
+
+.sever1 .listli3 i {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url("../../images/train/common_foot_2.png") no-repeat -80px 0;
+}
+.sever1 .listli4 {
+    width: 170px;
+    height: 170px;
+    margin-top: 20px;
+    border-left: 1px dashed #ccc;
+    float: left;
+    padding-left: 20px;
+}
+
+.sever1 .listli4 i {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url("../../images/train/common_foot_2.png") no-repeat -120px 0;
+    
+}
+.sever1 .listli5 {
+    width: 170px;
+    height: 170px;
+    margin-top: 20px;
+    border-left: 1px dashed #ccc;
+    float: left;
+    padding-left: 20px;
+}
+
+.sever1 .listli5 i {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: url("../../images//train/common_foot_2.png") no-repeat -160px 0;
+    
+}
+
+.content_banner {
+    background-color: #60ca6e;
+}
+
+.content_b1 {
+    /*width: 990px;*/
+    /*margin: 0 auto;*/
+    height: 60px;
+    background: url("../../images//train/thr_sun.jpg") no-repeat;
+    position: relative;
+}
+.content_tele {
+    position: absolute;
+    top: 13px;
+    right: 65px;
+    color: white;
+}
+
+
+.content_tele h3 {
+    font-size: 15px;
+    font-weight: 700;
+}

@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户登录--途牛通行证</title>
+   <meta name="description" content="途牛旅游网：中国最大的旅游行业在线电子商务网站，为您提供最为周到的旅游服务。途牛旅游网">
+	<meta name="keywords" content="会员登录">
+	<link rel="stylesheet" href="css/base.css"/>
+	<link rel="stylesheet" href="css/login.css"/>
+	 </head>
+	 <body>
+		<div id="yt">
+			<div class="tu">
+				<img src="tuniu.ico" alt="">
+			</div>
+			<div class="login-bj">
+				<div class="login">
+					<form>
+						<p>账号登录</p>
+						<p><input type="text" id="uname" placeholder="手机号/会员名/昵称/邮箱"></p>
+						<p><input type="password" id="upwd" placeholder="密码"></p>
+						<p>
+							<input type="checkbox" id="r">
+							<label for="r">两周内自动登录</label>
+							<a href="#" class="rf">手机动态登录?</a>
+						</p>
+						<button onclick="login()">登录</button>
+						<p>
+							<a href="#">忘记密码?</a>
+							<a href="user_reg.html" class="rf">新用户注册有礼,立即注册=></a>
+						</p>
+						<p>------------------其他方式登录---------------</p>
+						<p>
+							<span class="lf"><a href="#" class="rf">微信</a></span>
+							<span class="lf"><a href="#" class="rf">QQ</a></span>
+							<span class="lf"><a href="#" class="rf">微博</a></span>
+							<span class="lf"><a href="#" class="rf">合作卡</a></span>
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+		<footer id="footer">
+		</footer>
+	   <script src="js/jquery-1.11.3.js"></script>
+		<script src="js/ajax.js"></script>
+		<script src="js/footer.js"></script>
+ <script>
+		 function login(){
+    //1.创建xhr对象
+    var xhr=new XMLHttpRequest();
+    //4.绑定监听，接收响应
+    xhr.onreadystatechange=function(){
+        if(xhr.readyState==4&&xhr.status==200){
+            var result=xhr.responseText;
+						//if(result=="登录成功"){
+						if(result=="1"){
+						alert('登录成功');location.href="http://localhost:8080/index.html";
+							};
+							//修改成功之后，跳转到list页面
+							//location.href="http://127.0.0.1:8080/joblist.html";
+						//}
+        };
+    };
+    //2.打开连接，创建请求
+    xhr.open("post","/user/login",true);
+    
+    //3.发送请求
+    //设置请求消息头，修改接收所有字符
+    xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    var formdata="uname="+uname.value+"&upwd="+upwd.value;
+    xhr.send(formdata);
+} 
+		  </script>
+	 </body>
+	</html>
+	
+	
+	

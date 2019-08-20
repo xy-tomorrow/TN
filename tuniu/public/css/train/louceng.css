@@ -1,0 +1,6 @@
+#LoutiNav{ border: 1px solid gray; width: 30px; position: fixed; top: 150px; left: 20px; display: none;}
+#LoutiNav li{ width: 30px; height: 30px;border-bottom: 1px solid gray; line-height: 30px; text-align: center; cursor: pointer;}
+#LoutiNav span{display: none;}
+/*#LoutiNav .active{background: white; color: darkred;}*/
+#LoutiNav li:hover span{display: block; font-size: 12px; background: green; color: white;}
+#LoutiNav li:hover i{display: none;}

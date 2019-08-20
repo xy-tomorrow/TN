@@ -1,0 +1,587 @@
+
+/*ͷ����ʼ*/
+.top-right .style-croci{
+    color: #ff8800;
+}
+.w {
+    width: 1190px;
+    margin: 0 auto;
+}
+.triangle {
+    display: inline-block;
+    width: 7px;
+    height: 4px;
+    background: url(../../image/guilin/sprite.png) no-repeat -8px -4px;
+    vertical-align: middle;
+    margin: -3px 0px 0px 3px;
+}
+.triangle_k {
+    display: inline-block;
+    width: 7px;
+    height: 4px;
+    background: url(../../image/guilin/sprite.png) no-repeat -8px -19px;
+    vertical-align: middle;
+    margin: -3px 0px 0px 3px;
+}
+.triang_font {
+    display: inline-block;
+    width: 12px;
+    font-size: 12px;
+    height: 7px;
+    margin: 12px 0 0 -2px;
+    position: relative;
+    overflow: hidden;
+    line-height: 15px;
+}
+.triang_font em{
+    text-decoration: none;
+    display: inline-block;
+    width: 12px;
+    position: absolute;
+    top: -8px;
+    left: 0px;
+    height: 15px;
+}
+
+
+
+/* 顶栏样式�?�? beg */
+
+.header-top {
+    background-color: #F8F8F8;
+    border: 1px solid #EEEEEE;
+}
+.top-in {
+    height: 29px;
+    position: relative;
+}
+.top-in .top-left {
+    float: left;
+    width: 180px;
+    line-height: 29px;
+    height: 29px;
+}
+.top-left img {
+    width: 100px;
+    float: right;
+    margin-top: 5px;
+}
+.top-left ul li {
+    float: left;
+}
+.top-left ul li a {
+    display: inline-block;
+    font-size: 12px;
+    color: #404040;
+    padding: 0 7px;
+    line-height: 29px;
+}
+.top-left  li a:hover {
+    color: #C81623
+}
+.top-right {
+    float: right;
+}
+.top-right li {
+    float: left;
+    padding: 0 12px;
+    line-height: 29px;
+}
+#indent {
+    position: relative;
+}
+.atlas-div {
+    width: 1180px;
+    height: 249px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: #fff;
+    display: none;
+    z-index: 999;
+    background: url(../../image/guilin/atlas-div.png) no-repeat;
+}
+#indent_ul {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    display: none;
+    border: 1px solid #dedada;
+    background-color: #f8f8f8;
+    border-top: none;
+    text-align: center;
+    z-index: 999;
+}
+#indent_ul li {
+    line-height: 30px;
+    font-size: 12px;
+    padding-left: 10px;
+}
+.top-right li a {
+    color: #404040;
+}
+
+.top-right  li a:hover {
+    color: #C81623
+}
+.right-lis li {
+    height: 29px;
+    position: relative;
+}
+#two > div {
+    position: absolute;
+    left: -178px;
+    top: 30px;
+    display: none;
+    z-index: 999;
+}
+#two > div img {
+    width: 270px;
+}
+#there > div {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    display: none;
+    z-index: 999;
+    border: 1px solid #F8F8F8;
+}
+.right-lis li a  {
+    display: inline-block;
+    width: 18px;
+    height: 30px;
+    background: url(../../image/guilin/sprite.png) no-repeat;
+}
+.right-lis .one {
+    background-position: -40px -41px;
+}
+.right-lis .two {
+    background: url(../../image/guilin/dy-in.gif) no-repeat;
+    width: 30px;
+}
+
+.right-lis .there {
+    background-position: -63px -41px;
+}
+
+/* 顶栏样式结束 end */
+
+
+
+/* logo search 样式�?�? beg  */
+
+.logo {
+    float: left;
+    overflow: hidden;
+
+}
+.logo h1 {
+    display: block;
+    float: left;
+}
+.logo h1 a {
+    display: block;
+    width: 140px;
+    overflow: hidden;
+}
+.logo > h1  img {
+    display: inline-block;
+    height: 100px;
+}
+.usersite {
+    width:180px;
+    height: 40px;
+    padding: 30px 0px 0 22px;
+    float: left;
+    cursor: pointer;
+}
+.usersite strong {
+    margin-right:4px;
+}
+.usersite img {
+    width: 65px;
+    margin-top: 6px;
+}
+
+.seach {
+    padding: 30px 0;
+    float: left;
+    position: relative;
+
+}
+.seach .news {
+    border: 3px solid #FF8800;
+    border-right:none;
+    float: left;
+}
+.seach .news > div {
+    width: 89px;
+    height: 34px;
+    font-size: 12px;
+    background-color: #F8F8F8;
+    border-right: 1px solid #E5E5E5;
+    line-height: 34px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    color: #999;
+}
+
+#product ul{
+    position: absolute;
+    top: 34px;
+    left: 0;
+    display: none;
+    z-index: 999;
+}
+#product a{
+    text-align: center;
+    line-height: 28px;
+    background-color: #fff;
+    width: 88px;
+    overflow: hidden;
+    display: block;
+    border: 1px solid #F8F8F8;
+    border-top: none;
+}
+#product a:hover{
+    background-color: #e5e5e5;
+    color: #000;
+}
+.seach input {
+    width: 332px;
+    height: 18px;
+    padding: 8px;
+    border: 3px solid #FF8800;
+    border-left: none;
+    
+    outline: none;
+    float: left;
+    background: url(../../images/guilin/123123.png) no-repeat 200px;
+}
+.seach button {
+    width: 67px;
+    height: 40px;
+    background-color: #FF8800;
+    border: none;
+    outline: none;
+    background: url(../../image/guilin/searchbtn1.png) no-repeat;
+
+}
+.seach button span {
+    display: inline-block;
+    width: 15px;
+    height: 14px;
+}
+.seach > a {
+    margin-left: 4px;
+}
+#search_news {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    border: 1px solid #F8F8F8;
+    background-color: #fff;
+    display: block;
+    width: 506px;
+    height: 310px;
+    display: none;
+    z-index: 999;
+}
+#search_news a:hover {
+    color: #FF8800;
+
+}
+#search_news_span {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    font-family: "simsun";
+}
+#search_news h3{
+    color: #FF8800;
+    line-height: 35px;
+    padding: 0 10px;
+}
+#search_news strong{
+    color: #000;
+}
+.search_news1_strong {
+    background-color: #eee;
+    display: inline-block;
+    padding: 2px;
+}
+#search_news li {
+    float: left;
+}
+.search_news1 {
+    width: 50px;
+    padding: 0 10px;
+}
+.search_news2 {
+    width: 360px;
+    padding: 0 10px;
+}
+#search_news a{
+    color: #999;
+    margin-right: 5px;
+    line-height: 25px;
+}
+
+.tel {
+    float: right;
+    padding: 32px 20px 0 0;
+    position: relative;
+    font-size: 12px;
+    position: relative;
+}
+.tel .tel-greet {
+    height: 43px;
+    background-color: #F6F7FA;
+    position: relative;
+    padding:8px 0 0 35px;
+    border-radius: 40% 0px 0px 40%;
+}
+.tel .tel-greet a {
+    display: block;
+}
+.tel .tel-greet span a {
+    color: #22C233;
+}
+.tel .tel-greet img {
+    height: 25px;
+    position: absolute;
+    left: 5px;
+    top: 13px;
+}
+.tel div {
+    float: left;
+}
+.tel .tel-right {
+    border-radius:0;
+    padding-left: 36px;
+    padding-right: 55px;
+}
+.tel .tel-right img {
+    left: 8px;
+}
+.tel .tel-right i {
+    display: block;
+}
+.tel .tel-right span {
+    color: #FF8B46;
+}
+.tel_chou {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    width: 78px;
+}
+#tel_mid {
+    position: absolute;
+    display: none;
+    right: 40px;
+    top: 83px;
+    border: 2px solid #f8f8f8;
+    border-top: none;
+    background-color: #fff;
+    padding: 10px;
+    z-index: 999;
+}
+#tel_mid span {
+    display: block;
+    line-height: 25px;
+}
+.nav {
+    background-color: #2DBB55;
+    font-size: 14px;
+    font-weight: 700;
+    position: relative;
+}
+.lis li {
+    float: left;
+    overflow: hidden;
+}
+.lis li div{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 999;
+}
+.lis li a {
+    display: inline-block;
+    padding: 0  12px 0 12px;
+    line-height: 40px;
+    color: #fff;
+}
+.lis li a:hover {
+    background-color: #11A13A;
+}
+.lis-selected {
+    background-color: #11A13A;
+}
+.lis span {
+    width: 1px;
+    height: 16px;
+    display: inline-block;
+    background-color: #1FAE48;
+    margin-top: 12px;
+}
+
+/*ͷ������*/
+/*........................................footerlink��ʼ..............................................*/
+.ftlink1{
+    height: 220px;
+    background-color: #f5f5f5;
+    margin-top: 10px;
+    border-top: 1px solid #d8d8d8;
+}
+.ftlink .link{
+    width: 990px;
+    height: 180px;
+    margin: 20px auto;
+
+}
+.ftlink .link h3 span{
+    position: absolute;
+    left: 10px;
+    top: -8px;
+}
+.ftlink .link div{
+    padding-left: 50px;
+    padding-right: 20px;
+    border-right: 1px dotted #d8d8d8;
+    position: relative;
+
+}
+.ftlink .link .link5{
+    border: 0;
+}
+.ftlink .link  h3{
+    margin-bottom: 20px;
+}
+.ftlink  ul{
+    float: left;
+    margin-right: 10px;
+}
+.ftlink  ul li{
+    line-height: 20px;
+}
+
+
+
+.ftlink2{
+    height: 62px;
+    background-color: #61ca6e;
+}
+/*........................................footerlink��ʼ..............................................*/
+
+/*........................................................��...................................................*/
+.end{
+    text-align: center;
+}
+
+.tips{
+    position: relative;
+
+}
+
+.tip1, .tip2, .tip3, .tip4{
+    width: 238px;
+    height: 58px;
+    border: 1px solid #d8d8d8;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+
+}
+.tip1 {
+    margin-left: -495px;
+}
+.tip2{
+    margin-left:-246px;
+}
+.tip3{
+    margin-left: 5px;
+}
+.tip4{
+    margin-left: 255px;
+}
+ .end .pic{
+    text-align: center;
+    margin-top: 80px;
+     margin-bottom: 15px;
+     height: 60px;
+}
+.end p{
+    line-height: 25px;
+}
+.end p a{
+    margin: 0 5px;
+}
+.end em{
+    display: inline-block;
+    height: 38px;
+    width: 175px;
+    border: 1px solid  #d8d8d8;
+    margin: 10px 5px;
+}
+/*........................................................��...................................................*/
+.bottom{
+    width: 930px;
+    height: 40px;
+    margin: 5px auto;
+    border-top:1px solid  #d8d8d8;
+    padding: 10px 30px;
+}
+.bottom .bottom2{
+    width: 870px;
+}
+.bottom .bottom2 a{
+    margin: 0 2px;
+}
+/*....................................................��...................................................*/
+/*.....................................................�ײ����.............................*/
+.ad{
+    padding-top: 15px;
+    width: 100%;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 0;
+}
+.ad-in{
+    width: 1190px;
+    height: 150px;
+
+}
+.ad-in .x{
+    height: 30px;
+    width: 30px;
+    color: #bbb;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+
+    font-size: 50px;
+}
+.hongbao1{
+    color: #fff;
+    margin: 0 15px;
+}
+.hongbao1 input{
+    outline: none;
+    border: 0;
+}
+.hongbao1 span{
+    color: red;
+}
+.hongbao3{
+    width: 187px;
+    height: 150px;
+}
+
+/*.....................................................�ײ����.............................*/

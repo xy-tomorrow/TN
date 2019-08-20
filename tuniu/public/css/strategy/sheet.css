@@ -1,0 +1,885 @@
+/*common  beg*/
+
+.w {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+/*common  end*/
+
+body{
+    overflow-x: hidden;
+    position: relative;
+    z-index: -2;
+}
+canvas {
+    z-index: -1;
+}
+.head-nav {
+    background-color: #4C5A65;
+}
+
+.head-nav-in {
+    overflow: hidden;
+
+}
+
+.head-nav-in h1 {
+    padding: 9px 0;
+    width: 120px;
+    float: left;
+}
+
+.head-nav-in h1 > a {
+    display: block;
+}
+
+.head-nav-in li {
+    float: left;
+}
+
+.head-nav-in li > a {
+    padding: 0 20px;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+    color: #fff;
+}
+
+.nav-hover {
+    background-color: #33BC60;
+}
+
+.head-nav-in li > a:hover {
+    background-color: #33BC60;
+}
+
+.nav-list {
+    float: right;
+    font-size: 14px;
+    color: #959CA1;
+    padding: 0 10px;
+}
+
+.nav-list > span {
+    float: left;
+    line-height: 60px;
+    padding: 0 10px;
+}
+
+.nav-list > span a {
+    color: #4BC86D;
+}
+
+.nav-list > div {
+    float: left;
+    text-align: right;
+    line-height: 20px;
+    padding: 10px 0;
+}
+
+.nav-list > div i {
+    display: block;
+    color: #FFAA32;
+}
+
+.strategy {
+    overflow: hidden;
+}
+
+.strategy li {
+    float: left;
+    padding: 0 25px;
+    line-height: 57px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.strategy li a {
+    color: #000;
+}
+
+.strategy .strategy-bd {
+    border-bottom: 3px solid #22C233;
+    color: #22C233;
+}
+
+.strategy .strategy-bd a {
+    color: #22C233;
+}
+
+.slideshow {
+    background: url(../../images/strategy/slideshow2.jpeg) no-repeat center center;
+    margin-bottom: 22px;
+}
+
+.slideshow-in {
+    padding-top: 36px;
+    position: relative;
+    height: 600px;
+}
+
+.slideshow-in > a {
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 36px;
+}
+
+.slideshow-in > a span {
+    display: block;
+    font-size: 20px;
+}
+
+.slideshow-in > a span em {
+    font-size: 32px;
+}
+
+.searh {
+    position: absolute;
+    width: 689px;
+    background: rgba(0, 0, 0, .4);
+    left: 50%;
+    margin-left: -344px;
+    bottom: 50px;
+    line-height: 38px;
+    padding: 7px 0 14px 15px;
+    color: #fff;
+}
+
+.searh > span {
+    float: left;
+}
+
+.searh li {
+    float: left;
+    padding: 0 10px;
+}
+
+.searh li a {
+    color: #fff;
+}
+
+.searh input {
+    float: left;
+    width: 555px;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    border-radius: 6px 0 0 6px;
+}
+
+.searh button {
+    border: none;
+    outline: none;
+    background-color: #FF8800;
+    width: 78px;
+    height: 40px;
+    float: left;
+}
+
+.images {
+    position: absolute;
+    top: 50%;
+    margin-top: -190px;
+    right: 36px;
+}
+
+.images a {
+    display: block;
+    margin-top: 10px;
+}
+
+.images .img-bd {
+    border: 2px solid #FF8800;
+    box-shadow: 0 0 2px 2px white ;
+}
+
+.images img {
+    display: block;
+    width: 110px;
+    height: 60px;
+}
+
+.recommend {
+    position: relative;
+    margin-bottom: 66px;
+}
+
+.recommend > h1 {
+    line-height: 86px;
+    font-size: 26px;
+    width: 1105px;
+    border-bottom: 1px solid #E4E4E4;
+    text-align: center;
+}
+
+.recommend > span {
+    position: absolute;
+    left: 1125px;
+    top: 68px;
+    width: 100px;
+    line-height: 36px;
+    color: #33bc60;
+    overflow: hidden;
+    cursor: pointer;
+}
+#r_a i {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    bottom: -5px;
+    width: 20px;
+    height: 20px;
+    background: url(../../images/strategy/icon-mask.png) no-repeat 0 -69px;
+}
+.recommend-in {
+    padding: 30px 0 66px;
+}
+
+.recommend-in_l {
+    width: 280px;
+    height: 520px;
+    float: left;
+}
+
+.recommend-in_l a {
+    display: block;
+    margin-bottom: 20px;
+    width: 280px;
+    height: 160px;
+}
+
+.recommend-in_l .recommend-in_l01 {
+    background: url(../../images/strategy/recommend-in_l01.jpeg) no-repeat;
+}
+
+.recommend-in_l .recommend-in_l02 {
+    background: url(../../images/strategy/recommend-in_l02.jpeg) no-repeat;
+}
+
+.recommend-in_l .recommend-in_l03 {
+    background: url(../../images/strategy/recommend-in_l03.jpeg) no-repeat;
+}
+
+.recommend-in_r {
+    width: 910px;
+    height: 520px;
+    float: left;
+}
+
+.recommend-in_r > div {
+    width: 280px;
+    height: 90px;
+    padding-top: 156px;
+    float: left;
+    margin: 0 0 27px 23px;
+    position: relative;
+}
+.recommend-in_r > div:hover {
+    box-shadow: 0 1px 3px 0 #ff8800;
+}
+.recommend-in_r0 {
+    display: block;
+}
+
+.recommend-in_r img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 156px;
+}
+
+.recommend-in_r0 div {
+    width: 258px;
+    height: 68px;
+    border: 1px solid #E4E4E4;
+    padding: 10px;
+}
+
+.recommend-in_r0 div > strong {
+    font-size: 16px;
+    line-height: 24px;
+    display: block;
+    color: #000;
+}
+
+.recommend-in_r0 div > span {
+    display: block;
+    overflow: hidden;
+}
+
+.recommend-in_r0 div > span i {
+    color: #41CA4F;
+    float: left;
+}
+
+.recommend-in_r0 div > span s {
+    float: right;
+    text-decoration: none;
+    color: #999999;
+}
+
+.bargain {
+    background-color: #F7F7F7;
+    position: relative;
+}
+
+.bargain .bargain-in {
+    position: relative;
+}
+
+.bargain-in h1 {
+    line-height: 110px;
+    font-size: 26px;
+    width: 1105px;
+    border-bottom: 1px solid #E4E4E4;
+    text-align: center;
+}
+
+.bargain-in > span {
+    position: absolute;
+    left: 1125px;
+    top: 90px;
+    width: 100px;
+    line-height: 36px;
+    color: #33bc60;
+    overflow: hidden;
+    cursor: pointer;
+}
+#b_a i {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    bottom: -5px;
+    width: 20px;
+    height: 20px;
+    background: url(../../images/strategy/icon-mask.png) no-repeat 0 -69px;
+}
+
+
+.bargain-ul li {
+    float: left;
+    margin: 15px 0 11px 0;
+    overflow: hidden;
+}
+
+.bargain-ullis-1 {
+    display: block;
+}
+
+.bargain-ullis-1 a {
+    display: block;
+    float: left;
+}
+.bargain-ullis-1div {
+    box-shadow: 10px 10px #f80 ;
+}
+.bargain-ullis-1 h3 {
+    color: #747474;
+    font-size: 18px;
+    line-height: 32px;
+    margin: 12px 0;
+    font-weight: 500;
+}
+
+.bargain-ullis-1 img {
+    width: 370px;
+    height: 210px;
+}
+
+.bargain-ullis-1div {
+    width: 348px;
+    height: 94px;
+    border: 1px solid #E4E4E4;
+    padding: 10px;
+}
+
+.bargain-ullis-1div p {
+    height: 50px;
+    overflow: hidden;
+    color: #404040;
+    font-size: 16px;
+}
+
+.bargain-ullis-1div span {
+    color: #FF8800;
+    font-size: 12px;
+    line-height: 22px;
+    overflow: hidden;
+    display: block;
+}
+
+.bargain-ullis-1div em {
+    float: left;
+}
+
+.bargain-ullis-1div s {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.bargain-ullis-1div button {
+    float: right;
+    width: 86px;
+    height: 32px;
+    line-height: 32px;
+    border: none;
+    outline: none;
+    background-color: #FF8800;
+    border-radius: 2px;
+}
+
+.bargain-ullis-1 .bargain-ullis2 {
+    margin: 0 40px;
+}
+
+.bargain-ul2 {
+    width: 504px;
+    margin: 0px auto;
+    display: block;
+    overflow: hidden;
+}
+
+.bargain-ul2 li {
+    float: left;
+    width: 50px;
+    height: 6px;
+    background-color: #CCCCCC;
+    margin: 17px 0 17px 13px;
+    cursor: pointer;
+
+}
+
+.bargain-ul2 .bargain-ul2hover {
+    background-color: #22C233;
+}
+
+.playLaw {
+    position: relative;
+}
+
+.playLaw > h2 {
+    line-height: 110px;
+    font-size: 26px;
+    width: 1105px;
+    border-bottom: 1px solid #E4E4E4;
+    text-align: center;
+}
+
+.playLaw > span {
+    position: absolute;
+    left: 1125px;
+    top: 90px;
+    width: 100px;
+    line-height: 36px;
+    color: #33bc60;
+    overflow: hidden;
+    cursor: pointer;
+}
+#p_a i {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    bottom: -5px;
+    width: 20px;
+    height: 20px;
+    background: url(../../images/strategy/icon-mask.png) no-repeat 0 -69px;
+}
+.playLaw > ul {
+    overflow: hidden;
+    margin: 30px 0 49px 0;
+}
+
+.playLaw > ul > li {
+    float: left;
+    position: relative;
+    padding-top: 255px;
+    height: 63px;
+    overflow: hidden;
+}
+
+.playLaw img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.playLawlis1 {
+    width: 593px;
+    height: 318px;
+}
+
+.playLawlis1 img {
+    width: 593px;
+}
+
+.playLawlis2 {
+    width: 289px;
+    overflow: hidden;
+    margin: 0 9px;
+}
+
+.playLawlis2 img {
+    height: 318px;
+}
+
+.playLawlis3 {
+    width: 289px;
+    overflow: hidden;
+}
+
+.playLawlis3 img {
+    height: 318px;
+}
+
+.playLawlis3-span li {
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 26px;
+    padding: 0 10px;
+}
+
+.playLawlis3-span li span {
+    display: block;
+}
+
+.playLawlis3-span li:first-child {
+    border-right: 1px solid #fff;
+    font-style: italic;
+}
+
+.playLawlis3-span li span:first-child {
+    font-size: 40px;
+    line-height: 32px;
+}
+
+.playLawlis3-span li:last-child span:first-child {
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.travel {
+    background-color: #F7F7F7;
+}
+
+.travel-in {
+    position: relative;
+}
+.travel-in > h2 {
+    line-height: 110px;
+    font-size: 26px;
+    width: 1105px;
+    border-bottom: 1px solid #E4E4E4;
+    text-align: center;
+}
+
+.travel-in > span {
+    position: absolute;
+    left: 1125px;
+    top: 90px;
+    width: 100px;
+    line-height: 36px;
+    color: #33bc60;
+    overflow: hidden;
+    cursor: pointer;
+}
+#t_a i {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    bottom: -5px;
+    width: 20px;
+    height: 20px;
+    background: url(../../images/strategy/icon-mask.png) no-repeat 0 -69px;
+}
+.travel-in-ul {
+    padding: 30px 0 40px 0;
+}
+.travel-in-ul li:hover {
+    box-shadow: 0 1px 3px 0 #ff8800;
+}
+.travel-in-ul li {
+    margin-bottom: 30px;
+    width: 370px;
+    height: 162px;
+    padding-top: 210px;
+    background-color: red;
+    float: left;
+    position: relative;
+}
+.travel-in-ul .style-li{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.travel-in-ul > li > img {
+    width: 370px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: none;
+    z-index: 0;
+}
+.travel-in-ul div {
+    height: 128px;
+    background-color: #fff;
+    position: relative;
+    z-index: 99;
+    width: 336px;
+    border: 1px solid #E4E4E4;
+    padding: 16px;
+    color: #999999;
+}
+.travel-in-ul div > h4 {
+    font-size: 14px;
+    color: #333333;
+    line-height: 22px;
+}
+.travel-in-ul div > p{
+    line-height: 20px;
+    margin: 10px 0;
+}
+.travel-in-ul div > span {
+    overflow: hidden;
+}
+.travel-in-ul div i {
+    float: left;
+    color: #97C333;
+}
+.travel-in-ul div img {
+    width: 25px;
+    margin-right: 5px;
+}
+.travel-in-ul div s {
+    float: right;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.destination {
+    overflow: hidden;
+    padding-top: 30px;
+}
+.destination h3 {
+    text-align: center;
+    line-height: 70px;
+    font-size: 28px;
+    border: none;
+    color: #333333;
+
+}
+.destination-nav {
+    border-bottom: 1px solid #000;
+    position: relative;
+    display: inline-block;
+    margin: 0 110px;
+}
+.destination-nav li {
+    float: left;
+    line-height: 20px;
+    font-size: 16px;
+    padding: 0 40px 9px;
+    position: relative;
+    font-weight: 600;
+    color: #333333;
+    cursor: pointer;
+}
+.destination-nav .destination-nav_color {
+    border-bottom: 2px solid #22C233;
+    top: 1px;
+    color: #22C233;
+}
+.destination-ul {
+    margin: 50px 0;
+}
+.destination-ul li {
+    display: none;
+    overflow: hidden;
+}
+.destination-ul_l {
+    float: left;
+}
+.destination-ul_r {
+    float: right;
+}
+.destination-ullis > div > div {
+    width: 595px;
+    line-height: 22px;
+    font-size: 16px;
+    overflow: hidden;
+}
+.destination-ullis div strong {
+    line-height: 35px;
+    color: #333333;
+    float: left;
+    width: 100px;
+}
+.destination-ullis div span{
+    float: right;
+    width: 495px;
+    display: block;
+    text-align: left;
+}
+.destination-ullis div span a {
+    float: left;
+    margin: 0 5px;
+
+}
+
+
+/*........................................footerlink��ʼ..............................................*/
+.ftlink1{
+    height: 220px;
+    background-color: #f5f5f5;
+    margin-top: 10px;
+    border-top: 1px solid #d8d8d8;
+}
+.ftlink .link{
+    width: 990px;
+    height: 180px;
+    margin: 20px auto;
+
+}
+.ftlink .link h3 span{
+    position: absolute;
+    left: 10px;
+    top: -8px;
+}
+.ftlink .link div{
+    padding-left: 50px;
+    padding-right: 20px;
+    border-right: 1px dotted #d8d8d8;
+    position: relative;
+
+}
+.ftlink .link .link5{
+    border: 0;
+}
+.ftlink .link  h3{
+    margin-bottom: 20px;
+}
+.ftlink  ul{
+    float: left;
+    margin-right: 10px;
+}
+.ftlink  ul li{
+    line-height: 20px;
+}
+
+
+
+.ftlink2{
+    height: 62px;
+    background-color: #61ca6e;
+}
+/*........................................footerlink��ʼ..............................................*/
+/*........................................................��...................................................*/
+.end{
+    text-align: center;
+}
+
+.tips{
+    position: relative;
+
+}
+
+.tip1, .tip2, .tip3, .tip4{
+    width: 238px;
+    height: 58px;
+    border: 1px solid #d8d8d8;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+
+}
+.tip1 {
+    margin-left: -495px;
+}
+.tip2{
+    margin-left:-246px;
+}
+.tip3{
+    margin-left: 5px;
+}
+.tip4{
+    margin-left: 255px;
+}
+.end .pic{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 15px;
+    height: 60px;
+}
+.end p{
+    line-height: 25px;
+}
+.end p a{
+    margin: 0 5px;
+}
+.end em{
+    display: inline-block;
+    height: 38px;
+    width: 175px;
+    border: 1px solid  #d8d8d8;
+    margin: 10px 5px;
+}
+/*........................................................��...................................................*/
+.bottom{
+    width: 930px;
+    height: 40px;
+    margin: 5px auto;
+    border-top:1px solid  #d8d8d8;
+    padding: 10px 30px;
+}
+.bottom .bottom2{
+    width: 870px;
+}
+.bottom .bottom2 a{
+    margin: 0 2px;
+}
+/*....................................................��...................................................*/
+/*.....................................................�ײ����.............................*/
+.ad{
+    padding-top: 15px;
+    width: 100%;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 0;
+}
+.ad-in{
+    width: 1190px;
+    height: 150px;
+
+}
+.ad-in .x{
+    height: 30px;
+    width: 30px;
+    color: #bbb;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+
+    font-size: 50px;
+}
+.hongbao1{
+    color: #fff;
+    margin: 0 15px;
+}
+.hongbao1 input{
+    outline: none;
+    border: 0;
+}
+.hongbao1 span{
+    color: red;
+}
+.hongbao3{
+    width: 187px;
+    height: 150px;
+    background:url("../../images/strategy/Cii-TFi5E4SIcXZrAACrqnK8YtkAAH84ALB6AkAAKvC959.png") no-repeat  -90px -90px  ;
+}

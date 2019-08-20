@@ -1,0 +1,142 @@
+.hotTicket {
+    height: 245px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.ticker_content {
+    width: 1167px;
+    height: 200px;
+    margin: 30px 0 0 20px;
+}
+
+.hotticketT .wz {
+    font-size: 16px;
+    float: left;
+}
+
+.hotticketT {
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+}
+
+.hotticketT ul {
+    position: absolute;
+    top: 0px;
+    left: 100px;
+}
+
+.hotticketT ul li {
+    width: 35px;
+    height: 20px;
+    font-size: 11px;
+    color: #666666;
+    font-weight: normal;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hotticketT ul li.active {
+    background-color: #42b312;
+    color: white;
+
+}
+
+.ticker_content .product {
+    display: none;
+}
+
+.ticker_content .product.selected {
+    display: block;
+}
+
+.ma1 {
+    margin-left: 80px;
+}
+
+.hotticket_list {
+    width: 250px;
+    height: 130px;
+    border-right: 1px dashed #ccc;
+    text-indent: 5px;
+    padding: 20px;
+}
+
+.hotticket_list a {
+    display : block;
+    overflow : hidden;
+}
+.hotticket_list p {
+    margin: 7px 0;
+}
+
+.hotticket_list span {
+    float: right;
+    color: #ff6600;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.hotticket_list span i {
+    font-size: 7px;
+}
+
+.hotticket_list span em {
+    font-size: 11px;
+    color: #a69999;
+}
+
+.bd0 {
+    border: none;
+}
+
+/*��������*/
+.content_help {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 37px;
+    margin-bottom: 5px;
+
+}
+
+.content_help_list {
+    height: 236px;
+    border-top: 2px solid #42b312;
+    padding: 27px 0 0 36px;
+    overflow: hidden;
+}
+
+.content_hple1 {
+    float: left;
+    width: 220px;
+    height: 290px;
+    padding-right: 80px;
+}
+
+.content_hple1 p {
+    margin-top: 10px;
+    line-height: 25px;
+}
+
+.qishi {
+    display: block;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    z-index: 99999999999999999999999;
+}
+
+#qidian {
+    background: url("../../images/train/ticket-2.png") no-repeat 0px -130px;
+    top: 97px;
+    left: 20px;
+}
+
+#zhongdian {
+    background: url("../../images/train/ticket-2.png") no-repeat 0px -153px;
+    top: 148px;
+    left: 20px;
+}

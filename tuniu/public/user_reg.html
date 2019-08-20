@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>途牛注册</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/reg.css">
+</head>
+
+<body>
+    <div id="head">
+        <img src="tuniu.ico" alt="">
+    </div>
+    <div id="back">
+        <div id="reg">
+            <table>
+                <tr>
+                    <td>新用户注册</td>
+                    <td></td>
+                    <td><a href="user_login.html">直接登录</a></td>
+                </tr>
+                <tr>
+                    <td>用户名：</td>
+                    <td><input onblur="uname_blur()" onfocus="uname_focus()" type="text" id="uname" placeholder="请输入用户名"></td>
+                    <td>
+                        <p id="p1" style="color:red"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>登录密码：</td>
+                    <td><input onblur="upwd_blur()" onfocus="upwd_focus()" type="password" id="upwd" placeholder="请输入密码"></td>
+                    <td>
+                        <p id="p2" style="color:red"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>确认密码:</td>
+                    <td><input type="password" placeholder="请确认密码" onfocus="dupwd_focus()" onblur="dupwd_blur()" id="dupwd"></td>
+                    <td>
+                        <p id="p3"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>邮箱:</td>
+                    <td><input type="text" placeholder="请输入邮箱地址" onblur="email_blur()" onfocus="email_focus()" id="email"></td>
+                    <td>
+                        <p id="p4"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>手机号：</td>
+                    <td><input type="text" placeholder="请输入手机号" onblur="phone_blur()" onfocus="phone_focus()" id="phone"></td>
+                    <td>
+                        <p id="p5"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="btn"><button onclick="login()">提交注册信息</button></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <footer id="footer">
+    </footer>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/footer.js"></script>
+    <script>
+        //1.对用户名进行验证
+        function uname_focus() {
+            //显示输入的条件
+            p1.innerHTML = "用户名长度在6到9位之间";
+        }
+
+        function uname_blur() {
+            //判断文本框是否为空
+            if (uname.value == "") {
+                p1.innerHTML = "用户名为空！"
+            } else if (uname.value.length < 6) {
+                p1.innerHTML = "用户名太短"
+            } else {
+                p1.innerHTML = "正常"
+            }
+        }
+        //验证密码
+        function upwd_focus() {
+            //显示输入的条件
+            p2.innerHTML = "密码长度在6到12位之间"
+        }
+
+        function upwd_blur() {
+            //判断文本框是否为空
+            if (upwd.value == "") {
+                p2.innerHTML = "密码不能为空！"
+            } else if (upwd.value.length < 6) {
+                p2.innerHTML = "密码长度不能少于六位"
+            } else {
+                p2.innerHTML = "密码格式正确"
+            }
+        }
+        //验证确认密码
+        function dupwd_focus() {
+            //显示输入的条件
+            p3.innerHTML = "密码长度在6到12位之间";
+        }
+
+        function dupwd_blur() {
+            //判断文本框是否为空
+            if (dupwd.value != upwd.value) {
+                p3.innerHTML = "两次输入密码不一致"
+            } else if (dupwd.value == upwd.value) {
+                p3.innerHTML = "确认密码成功"
+            } else {
+                p3.innerHTML = "密码格式错误"
+            }
+        }
+        //验证邮箱
+        function email_focus() {
+            //显示输入的条件
+            p4.innerHTML = "请输入合法的邮箱地址";
+        }
+
+        function email_blur() {
+            //判断文本框是否为空
+            if (email.value == "") {
+                p4.innerHTML = "邮箱不能为空！"
+            } else {
+                p4.innerHTML = "该邮箱可以使用"
+            }
+        }
+        //对手机号进行验证
+        function phone_focus() {
+            //显示输入的条件
+            p5.innerHTML = "手机号长度为11";
+        }
+
+        function phone_blur() {
+            //判断文本框是否为空
+            if (phone.value.length != 11) {
+                p5.innerHTML = "手机号格式错误";
+            } else if (phone.value.length == 11) {
+                p5.innerHTML = "输入成功";
+            } else {
+                p5.innerHTML = "输入错误";
+
+            }
+        }
+
+        function login() {
+            //1.创建xhr对象
+            var xhr = new XMLHttpRequest();
+            //4.绑定监听，接收响应
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var result = xhr.responseText;
+                    //if(result=="注册成功"){
+                    if (result == "1") {
+                        alert('注册成功');
+                        location.href = "http://localhost:8080/index.html";
+                    };
+                    //修改成功之后，跳转到list页面
+                    //location.href="http://127.0.0.1:8080/joblist.html";
+                    //}
+                };
+            };
+            //2.打开连接，创建请求
+            xhr.open("post", "/user/reg", true);
+
+            //3.发送请求
+            //设置请求消息头，修改接收所有字符
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            var formdata = "uname=" + uname.value + "&upwd=" + upwd.value + "&email=" + email.value + "&phone=" + phone.value;
+            xhr.send(formdata);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+/*上部右侧面包屑导航的样式*/
+/*背景*/
+.breadcrumb{
+    background:#f5f5f5;
+}
+/*改变连接串的样式*/
+.breadcrumb-item + .breadcrumb-item::before{
+    content:"|";
+}
+/*修改主导航的样式*/
+ul.nav>li.nav-item>a:hover{
+    cursor:pointer;
+}
+
+.input-group{
+    border:1px solid #0aa1ed;
+    margin-right:50px;
+}

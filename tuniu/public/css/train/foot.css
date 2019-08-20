@@ -1,0 +1,34 @@
+.shopShow {
+    height: 43px;
+    text-align: center;
+}
+
+.copyright {
+    width: 952px;
+    height: 45px;
+    margin: 0 auto;
+}
+
+.copyright ul li {
+    float: left;
+    margin-right: 5px;
+}
+
+.copyright ul li a {
+    display: block;
+    width: 114px;
+    height: 41px;
+    background-color: green;
+}
+.copyright ul li a img {
+    width: 114px;
+    height: 41px;
+}
+
+.yatai {
+    width: 140px;
+    height: 47px;
+    background: url("../../images/train/pata.png") no-repeat;
+    margin: 25px auto 15px;
+}
+

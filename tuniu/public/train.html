@@ -1,0 +1,752 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <link rel="shortcut icon" href="info_logo.ico">
+    <link rel="stylesheet" href="css/train/base.css"/>
+    <link rel="stylesheet" href="css/train/train_ticket_head.css"/>
+    <link rel="stylesheet" href="css/train/content.css"/>
+    <link rel="stylesheet" href="css/train/louceng.css"/>
+    <link rel="stylesheet" href="css/train/sever.css"/>
+    <link rel="stylesheet" href="css/train/foot.css"/>
+    <script type="text/javascript" src="js/train/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="js/train/head.js"></script>
+    <script src="js/train/foundation-datepicker.js"></script>
+    <script src="js/train/foundation-datepicker.zh-CN.js"></script>
+    <link rel="stylesheet" href="css/train/foundation-datepicker.css"/>
+    <meta charset="UTF-8">
+    <title>途牛-火车票-trainTickets</title>
+</head>
+<body style="cursor:url('info_logo.ico'),auto;">
+<!--头部开始-->
+<div class="head_top louceng" id="header">
+    <div class="top_login_bar w">
+        <div class="fl">
+            <a href="user_login.html">登录</a>
+            <span>|</span>
+            <a href="user_reg.html">注册</a>
+            <a href="#" class="clickhere_4 fr"></a>
+        </div>
+        <div class="fr">
+            <ul>
+                <li><a href="#">途牛招聘</a></li>
+                <li><a href="#">途牛商城</a></li>
+                <li><a href="#" class="fzorange">企业频道</a></li>
+                <li><a href="#" class="fzorange">途牛首页</a></li>
+                <li><a href="#">会员俱乐部</a></li>
+                <li id="myShop"><a href="#">我的订单<i class="i1" id="i1"></i></a>
+                    <ul id="allShop" class="hide">
+                        <li><a href="#">全部订单</a></li>
+                        <li><a href="#">我的机票</a></li>
+                        <li><a href="#">我的火车票</a></li>
+                        <li><a href="#">我的夺宝</a></li>
+                    </ul>
+                </li>
+                <li id="indexMap"><a href="#">网站地图<i class="i2"></i></a>
+
+                    <div id="indexMapDiv">
+                        <div class="d1 fl">
+                            去旅游
+                        </div>
+                        <div class="d2 fl">
+                            <ul>
+                                <li><a href="#">跟团游</a></li>
+                                <li><a href="#">自助游</a></li>
+                                <li><a href="#">酒+景</a></li>
+                                <li><a href="#">公司旅游</a></li>
+                                <li><a href="#">当地玩乐</a></li>
+                                <li><a href="#">首付出发</a></li>
+                            </ul>
+                        </div>
+                        <div class="d2 fl">
+                            <ul>
+                                <li><a href="#">牛人专线</a></li>
+                                <li><a href="#">亲子游</a></li>
+                                <li><a href="#">蜜月游</a></li>
+                                <li><a href="#">海岛游</a></li>
+                                <li><a href="#">老于推荐</a></li>
+                                <li><a href="#">机票+酒店</a></li>
+                            </ul>
+                        </div>
+                        <div class="d2 fl bdr">
+                            <ul>
+                                <li><a href="#">酒店</a></li>
+                                <li><a href="#">门票</a></li>
+                                <li><a href="#">游轮</a></li>
+                                <li><a href="#">签证</a></li>
+                                <li><a href="#">机票</a></li>
+                            </ul>
+                        </div>
+                        <div class="d1 centerd3 fl">
+                            寻优惠
+                        </div>
+                        <div class="d2 fl bdr">
+                            <ul>
+                                <li><a href="#">特卖</a></li>
+                                <li><a href="#">订酒店</a></li>
+                                <li><a href="#">一元夺宝</a></li>
+                                <li><a href="#">银行特惠游</a></li>
+                                <li><a href="#">银行分期游</a></li>
+                            </ul>
+                        </div>
+                        <div class="d1 centerd4 fl">
+                            看攻略
+                        </div>
+                        <div class="d2 fl bdr">
+                            <ul>
+                                <li><a href="#">攻略</a></li>
+                                <li><a href="#">途牛风向标</a></li>
+                                <li><a href="#">游记</a></li>
+                                <li><a href="#">达人玩法</a></li>
+                            </ul>
+                        </div>
+                        <div class="d1 centerd5 fl">
+                            查服务
+                        </div>
+                        <div class="d2 fl">
+                            <ul>
+                                <li><a href="#">帮助中心</a></li>
+                                <li><a href="#">积分阳光俱乐部</a></li>
+                                <li><a href="#">阳光保障</a></li>
+                                <li><a href="#">火车时刻表</a></li>
+                                <li><a href="#">地铁路线图</a></li>
+                                <li><a href="#">航班查询</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </li>
+                <li><a href="#"><i class="i3"></i></a></li>
+                <li id="saoYsao"><a href="#"><i class="i4"></i></a>
+                    <ul id="erweima">
+                        <li><img src="images/train/index_app.png" alt=""/></li>
+
+                    </ul>
+                </li>
+                <li><a href="#"><i class="i5"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="top_logoseachbar w">
+    <div class="logo fl"></div>
+    <div class="seach fl">
+        <a href="#" class="fl" id="allProA">所有产品<i class="i6 fr"></i></a>
+        <img src="images/train/QQ截图20170407231642.png" alt="" id="allPro"/>
+        <input type="text" name="" class="fl" placeholder="" id="getCont"/>
+        <button class="fl"></button>
+        <i class="i7"></i>
+        <img src="images/train/QQ截图20170407231542.png" id="getPlace"/>
+        <ul id="placeWite">
+            <li><a href="#">马尔代夫</a></li>
+            <li><a href="#">三亚</a></li>
+            <li><a href="#">日本</a></li>
+        </ul>
+    </div>
+    <a href="#" class="moreseach fl" id="searchMoreBtn">高级搜索<i class="i6 fr"></i> <img src="images/train/more.jpg" alt=""
+                                                                                       id="searchMore"/></a>
+
+    <div class="teleimg fr">
+        <span class="fl"></span>
+
+        <div class="tele fl">
+            <p class="telep1" id="telep11">24h客户服务电话
+            <ul id="tele1">
+                <li>固定电话:01066666666</li>
+                <li>手机:13911502426</li>
+            </ul>
+
+
+            <i class="i9"></i></p>
+            <p class="telep2">4007-999-999</p>
+        </div>
+        <img src="images/train/zhou_big.png" alt=""/>
+    </div>
+</div>
+<div class="baitiao" id="baitiao"></div>
+<div class="top_nav louceng">
+    <div class="top_navBar w">
+        <span class="sjjt"></span>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li id="gt" class="showBaitiao">
+                <a href="#">跟团游<i class="i10"></i></a>
+
+                <div class="secondMenu">
+                    <a href="#">二级菜单1</a><a href="#">二级菜单2</a><a href="#">二级菜单3</a><a href="#">二级菜单4</a>
+                </div>
+            </li>
+            <li class="showBaitiao">
+                <a href="#">自助游<i class="i10"></i></a>
+                <div class="secondMenu">
+                    <a href="#">二级菜单1</a><a href="#">二级菜单2</a><a href="#">二级菜单3</a><a href="#">二级菜单4</a>
+                </div>
+
+            </li>
+            <li class="showBaitiao"><a href="#">游轮<i class="i10"></i></a>
+
+
+                <div class="secondMenu">
+                    <a href="#">二级菜单1</a><a href="#">二级菜单2</a><a href="#">二级菜单3</a><a href="#">二级菜单4</a>
+                </div>
+            </li>
+            <li><a href="guilin.html">酒+景</a></li>
+            <li class="showBaitiao"><a href="#">机票<i class="i10"></i></a>
+
+
+                <div class="secondMenu">
+                    <a href="#">二级菜单1</a><a href="#">二级菜单2</a><a href="#">二级菜单3</a><a href="#">二级菜单4</a>
+                </div>
+            </li>
+            <li class="showBaitiao"><a href="../酒店--李晓宜/途牛酒店.html">酒店<i class="i10"></i></a>
+
+
+                <div class="secondMenu">
+                    <a href="#">二级菜单1</a><a href="#">二级菜单2</a><a href="#">二级菜单3</a><a href="#">二级菜单4</a>
+                </div>
+            </li>
+            <li><a href="train.html">火车票</a></li>
+            <li><a href="#">汽车票</a></li>
+            <li><a href="#">门票</a></li>
+            <li class="showBaitiao"><a href="../特卖-张志勇/特卖.html">特卖<i class="i10"></i></a>
+
+
+                <div class="secondMenu">
+                    <a href="#">二级菜单1</a><a href="#">二级菜单2</a><a href="#">二级菜单3</a><a href="#">二级菜单4</a>
+                </div>
+            </li>
+            <li class="showBaitiao"><a href="#">主题游<i class="i10"></i></a>
+
+
+                <div class="secondMenu">
+                    <a href="#">二级菜单1</a><a href="#">二级菜单2</a><a href="#">二级菜单3</a><a href="#">二级菜单4</a>
+                </div>
+            </li>
+            <li class="showBaitiao"><a href="#">出游服务<i class="i10"></i></a>
+
+
+                <div class="secondMenu">
+                    <a href="#">二级菜单1</a><a href="#">二级菜单2</a>
+                </div>
+            </li>
+            <li class="showBaitiao"><a href="#">定制游<i class="i10"></i></a>
+
+                <div class="secondMenu">
+                    <a href="#">二级菜单1</a><a href="#">二级菜单2</a><a href="#">二级菜单3</a>
+                </div>
+            </li>
+            <li class="showBaitiao"><a href="strategy.html" class="bd0">攻略<i class="i10"></i></a>
+
+                <div class="secondMenu">
+<a href="#">二级菜单1</a><a href="#">二级菜单2</a><a href="#">二级菜单3</a>
+                </div>
+            </li>
+        </ul>
+        <span class="zijia"></span>
+        <span class="wuzhe"></span>
+        <span class="dsn"></span>
+    </div>
+</div>
+<div class="bigbanner">
+    <div class="lunbo">
+        <ul></ul>
+        <ol></ol>
+    </div>
+
+    <div class="w">
+
+        <div class="search_ticket">
+            <div class="search_top louceng">
+                <ul>
+                    <li>国内火车票</li>
+                    <li>汽车票</li>
+                </ul>
+            </div>
+            <div class="search_input">
+                <input type="text" name="" id="placeholder1" placeholder="北京"/>
+                <input type="text" name="" id="placeholder2" placeholder="上海"/>
+                <input type="text" name="" id="timeDate" placeholder="2017-4-4"/>
+
+                <div class="tishi">
+                    仅搜索高铁和动车
+                    <div class="openAndclose fr">
+                        <div class="open show fl" id="open"></div>
+                        <div class="close hide fr" id="close"></div>
+                    </div>
+                </div>
+                <input type="button" value="搜索列车" class="tijiao"/>
+                <span id="huan"></span>
+                <span class="qishi" id="qidian"></span>
+                <span class="qishi" id="zhongdian"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hotTicket w" style="box-shadow: 0 0 3px 0 #42b312;">
+    <div class="ticker_content louceng">
+        <div class="hotticketT">
+            热门火车票
+            <ul>
+                <li class="active">北京</li>
+                <li class="">杭州</li>
+                <li class="">广州</li>
+                <li class="">西安</li>
+                <li class="">南京</li>
+            </ul>
+        </div>
+        <div class="product selected">
+            <div class="hotticket_list fl">
+                <a href=""><p>北京-北京 <span><i>&yen;</i>177.5<em>起</em></span></p></a>
+                <a href=""><p>北京-杭州 <span><i>&yen;</i>24.5<em>起</em></span></p></a>
+                <a href=""><p>北京-广州 <span><i>&yen;</i>189.5<em>起</em></span></p></a>
+                <a href=""><p>北京-南京 <span><i>&yen;</i>46.5<em>起</em></span></p></a>
+            </div>
+            <div class="hotticket_list fl">
+                <a href=""><p>北京-天津 <span><i>&yen;</i>143.5<em>起</em></span></p></a>
+                <a href=""><p>北京-武汉 <span><i>&yen;</i>148.5<em>起</em></span></p></a>
+                <a href=""><p>北京-西安 <span><i>&yen;</i>180<em>起</em></span></p></a>
+                <a href=""><p>北京-苏州 <span><i>&yen;</i>12.5<em>起</em></span></p></a>
+            </div>
+            <div class="hotticket_list fl">
+                <a href=""><p>北京-无锡 <span><i>&yen;</i>19.5<em>起</em></span></p></a>
+                <a href=""><p>北京-常州 <span><i>&yen;</i>24.5<em>起</em></span></p></a>
+                <a href=""><p>北京-宁波 <span><i>&yen;</i>50.5<em>起</em></span></p></a>
+                <a href=""><p>北京-济南 <span><i>&yen;</i>109<em>起</em></span></p></a>
+            </div>
+            <div class="hotticket_list bd0 fl">
+                <a href=""><p>北京-青岛 <span><i>&yen;</i>518<em>起</em></span></p></a>
+                <a href=""><p>北京-合肥 <span><i>&yen;</i>79.5<em>起</em></span></p></a>
+                <a href=""><p>北京-郑州 <span><i>&yen;</i>128.5<em>起</em></span></p></a>
+                <a href=""><p>北京-温州 <span><i>&yen;</i>175.5<em>起</em></span></p></a>
+            </div>
+        </div>
+        <div class="product">
+            <div class="hotticket_list fl">
+                <a href=""><p>杭州-北京 <span><i>&yen;</i>177.5<em>起</em></span></p></a>
+                <a href=""><p>杭州-杭州 <span><i>&yen;</i>24.5<em>起</em></span></p></a>
+                <a href=""><p>杭州-广州 <span><i>&yen;</i>189.5<em>起</em></span></p></a>
+                <a href=""><p>杭州-南京 <span><i>&yen;</i>46.5<em>起</em></span></p></a>
+            </div>
+            <div class="hotticket_list fl">
+                <a href=""><p>杭州-天津 <span><i>&yen;</i>143.5<em>起</em></span></p></a>
+                <a href=""><p>杭州-武汉 <span><i>&yen;</i>148.5<em>起</em></span></p></a>
+                <a href=""><p>杭州-西安 <span><i>&yen;</i>180<em>起</em></span></p></a>
+                <a href=""><p>杭州-苏州 <span><i>&yen;</i>12.5<em>起</em></span></p></a>
+            </div>
+            <div class="hotticket_list fl">
+                <a href=""><p>杭州-无锡 <span><i>&yen;</i>19.5<em>起</em></span></p></a>
+                <a href=""><p>杭州-常州 <span><i>&yen;</i>24.5<em>起</em></span></p></a>
+                <a href=""><p>杭州-宁波 <span><i>&yen;</i>50.5<em>起</em></span></p></a>
+                <a href=""><p>杭州-济南 <span><i>&yen;</i>109<em>起</em></span></p></a>
+            </div>
+            <div class="hotticket_list bd0 fl">
+                <a href=""><p>杭州-青岛 <span><i>&yen;</i>518<em>起</em></span></p></a>
+                <a href=""><p>杭州-合肥 <span><i>&yen;</i>79.5<em>起</em></span></p></a>
+                <a href=""><p>杭州-郑州 <span><i>&yen;</i>128.5<em>起</em></span></p></a>
+                <a href=""><p>杭州-温州 <span><i>&yen;</i>175.5<em>起</em></span></p></a>
+            </div>
+        </div>
+        <div class="product">
+            <div class="hotticket_list fl">
+                <a href=""><p>广州-北京 <span><i>&yen;</i>177.5<em>起</em></span></p></a>
+                <a href=""><p>广州-杭州 <span><i>&yen;</i>24.5<em>起</em></span></p></a>
+                <a href=""><p>广州-广州 <span><i>&yen;</i>189.5<em>起</em></span></p></a>
+                <a href=""><p>广州-南京 <span><i>&yen;</i>46.5<em>起</em></span></p></a>
+            </div>
+            <div class="hotticket_list fl">
+                <a href=""><p>广州-天津 <span><i>&yen;</i>143.5<em>起</em></span></p></a>
+                <a href=""><p>广州-武汉 <span><i>&yen;</i>148.5<em>起</em></span></p></a>
+                <a href=""><p>广州-西安 <span><i>&yen;</i>180<em>起</em></span></p></a>
+                <a href=""><p>广州-苏州 <span><i>&yen;</i>12.5<em>起</em></span></p></a>
+            </div>
+            <div class="hotticket_list fl">
+                <a href=""><p>广州-无锡 <span><i>&yen;</i>19.5<em>起</em></span></p></a>
+                <a href=""><p>广州-常州 <span><i>&yen;</i>24.5<em>起</em></span></p></a>
+                <a href=""><p>广州-宁波 <span><i>&yen;</i>50.5<em>起</em></span></p></a>
+                <a href=""><p>广州-济南 <span><i>&yen;</i>109<em>起</em></span></p></a>
+            </div>
+            <div class="hotticket_list bd0 fl">
+                <a href=""><p>广州-青岛 <span><i>&yen;</i>518<em>起</em></span></p></a>
+                <a href=""><p>广州-合肥 <span><i>&yen;</i>79.5<em>起</em></span></p></a>
+                <a href=""><p>广州-郑州 <span><i>&yen;</i>128.5<em>起</em></span></p></a>
+                <a href=""><p>广州-温州 <span><i>&yen;</i>175.5<em>起</em></span></p></a>
+            </div>
+        </div>
+        <div class="product">
+            <div class="hotticket_list fl">
+                <a href=""><p>西安-北京 <span><i>&yen;</i>177.5<em>起</em></span></p></a>
+                <a href=""><p>西安-杭州 <span><i>&yen;</i>24.5<em>起</em></span></p></a>
+                <a href=""><p>西安-广州 <span><i>&yen;</i>189.5<em>起</em></span></p></a>
+                <a href=""><p>西安-南京 <span><i>&yen;</i>46.5<em>起</em></span></p></a>
+            </div>
+            <div class="hotticket_list fl">
+                <a href=""><p>西安-天津 <span><i>&yen;</i>143.5<em>起</em></span></p></a>
+                <a href=""><p>西安-武汉 <span><i>&yen;</i>148.5<em>起</em></span></p></a>
+                <a href=""><p>西安-西安 <span><i>&yen;</i>180<em>起</em></span></p></a>
+                <a href=""><p>西安-苏州 <span><i>&yen;</i>12.5<em>起</em></span></p></a>
+            </div>
+            <div class="hotticket_list fl">
+                <a href=""><p>西安-无锡 <span><i>&yen;</i>19.5<em>起</em></span></p></a>
+                <a href=""><p>西安-常州 <span><i>&yen;</i>24.5<em>起</em></span></p></a>
+                <a href=""><p>西安-宁波 <span><i>&yen;</i>50.5<em>起</em></span></p></a>
+                <a href=""><p>西安-济南 <span><i>&yen;</i>109<em>起</em></span></p></a>
+            </div>
+            <div class="hotticket_list bd0 fl">
+                <a href=""><p>西安-青岛 <span><i>&yen;</i>518<em>起</em></span></p></a>
+                <a href=""><p>西安-合肥 <span><i>&yen;</i>79.5<em>起</em></span></p></a>
+                <a href=""><p>西安-郑州 <span><i>&yen;</i>128.5<em>起</em></span></p></a>
+                <a href=""><p>西安-温州 <span><i>&yen;</i>175.5<em>起</em></span></p></a>
+            </div>
+        </div>
+        <div class="product">
+            <div class="hotticket_list fl">
+                <a href=""><p>南京-北京 <span><i>&yen;</i>177.5<em>起</em></span></p></a>
+                <a href=""><p>南京-杭州 <span><i>&yen;</i>24.5<em>起</em></span></p></a>
+                <a href=""><p>南京-广州 <span><i>&yen;</i>189.5<em>起</em></span></p></a>
+                <a href=""><p>南京-南京 <span><i>&yen;</i>46.5<em>起</em></span></p></a>
+            </div>
+            <div class="hotticket_list fl">
+                <a href=""><p>南京-天津 <span><i>&yen;</i>143.5<em>起</em></span></p></a>
+                <a href=""><p>南京-武汉 <span><i>&yen;</i>148.5<em>起</em></span></p></a>
+                <a href=""><p>南京-西安 <span><i>&yen;</i>180<em>起</em></span></p></a>
+                <a href=""><p>南京-苏州 <span><i>&yen;</i>12.5<em>起</em></span></p></a>
+            </div>
+            <div class="hotticket_list fl">
+                <a href=""><p>南京-无锡 <span><i>&yen;</i>19.5<em>起</em></span></p></a>
+                <a href=""><p>南京-常州 <span><i>&yen;</i>24.5<em>起</em></span></p></a>
+                <a href=""><p>南京-宁波 <span><i>&yen;</i>50.5<em>起</em></span></p></a>
+                <a href=""><p>南京-济南 <span><i>&yen;</i>109<em>起</em></span></p></a>
+            </div>
+            <div class="hotticket_list bd0 fl">
+                <a href=""><p>南京-青岛 <span><i>&yen;</i>518<em>起</em></span></p></a>
+                <a href=""><p>南京-合肥 <span><i>&yen;</i>79.5<em>起</em></span></p></a>
+                <a href=""><p>南京-郑州 <span><i>&yen;</i>128.5<em>起</em></span></p></a>
+                <a href=""><p>南京-温州 <span><i>&yen;</i>175.5<em>起</em></span></p></a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--常见问题-->
+<div class="content_help w louceng">常见问题</div>
+<div class="content_help_list w">
+    <div class="content_hple1">
+        <h3>身份验证</h3>
+
+        <p>2014年新规：从未在网络购票的用户，请先携身份证去火车站专门窗口核验身份证信息，核验通过后才能网上购票</p>
+    </div>
+    <div class="content_hple1">
+        <h3>取票方式</h3>
+
+        <p>若您使用二代居民身份证预订火车票产品可凭预订时所使用的乘车人证件到车站售票窗口、铁路客票代售点或车站自动售票机上办理换票手续..<a href="#">更多 >></a></p>
+    </div>
+    <div class="content_hple1">
+        <h3>如何退票</h3>
+
+        <p>预订成功后，如未取票且离产品内显示的火车发车时间大于1小时30分钟，您可在线申请退票。预订成功后，如已取票或离产品内显示的火车发车时间小于1小时30分钟..<a href=>更多 >></a></p>
+    </div>
+    <div class="content_hple1">
+        <h3>如何改签</h3>
+
+        <p>预订成功后，如需办理订单内的车票改签，您须在换取纸质车票后携带预订时所使用的乘车人有效身份证件原件，在列车开车前前往车站改签窗口办续..<a href="#">更多 >> </a></p>
+    </div>
+</div>
+<div class="checi louceng w">
+    <img src="images/train/remenhuoce.jpg" alt=""/>
+</div>
+<!--服务开始-->
+<div class="sever">
+    <div class="sever1 w">
+        <li class="listli1"><i></i>
+            <dl>
+                <dt>去旅游</dt>
+                <dd>
+                    <p>
+                        <a href="#">跟团友</a>
+                        <a href="#">自助游</a>
+                        <a href="#">酒+景</a>
+                    </p></dd>
+                <dd>
+                    <p>
+                        <a href="#">海岛游</a>
+                        <a href="#">机票</a>
+                        <a href="#">邮轮</a>
+                    </p></dd>
+                <dd>
+                    <p>
+                        <a href="#">门票</a>
+                        <a href="#">亲子游</a>
+                        <a href="#">签证</a>
+                    </p></dd>
+                <dd>
+                    <p>
+                        <a href="#">机票+酒店</a>
+                        <a href="#">蜜月游</a>
+                        <a href="#">酒店</a>
+                    </p></dd>
+                <dd>
+                    <p>
+                        <a href="#">老于推荐</a>
+                        <a href="#">公司旅游</a>
+                        <a href="#">牛人专线</a>
+                    </p></dd>
+                <dd>
+                    <p>
+                        <a href="#">首付出发</a>
+                        <a href="#">当地玩乐</a>
+                        <a href="#">旅拍</a>
+                    </p></dd>
+
+            </dl>
+        </li>
+
+
+        <li class="listli2">
+            <i></i>
+            <dl>
+                <dt>寻优惠</dt>
+                <dd><a href="#">特卖</a></dd>
+                <dd><a href="#">订酒店 返现金</a></dd>
+                <dd><a href="#">一元夺宝</a></dd>
+                <dd><a href="#">银行特惠游</a></dd>
+                <dd><a href="#">银行分期游</a></dd>
+            </dl>
+        </li>
+
+        <li class="listli3">
+            <i></i>
+            <dl>
+                <dt>看攻略</dt>
+                <dd><a href="#">攻略</a></dd>
+                <dd><a href="#">途牛风向标</a></dd>
+                <dd><a href="#">游记</a></dd>
+                <dd><a href="#">达人玩法</a></dd>
+            </dl>
+        </li>
+
+        <li class="listli4">
+            <i></i>
+            <dl>
+                <dt>查服务</dt>
+                <dd><a href="#">帮助中心</a></dd>
+                <dd><a href="#">积分俱乐部</a></dd>
+                <dd><a href="#">阳光保障</a></dd>
+                <dd><a href="#">航班查询</a></dd>
+            </dl>
+        </li>
+
+        <li class="listli5">
+            <i></i>
+            <dl>
+                <dt>途牛APP</dt>
+                <dd><a href="#">扫描下载途牛APP</a></dd>
+                <dd><a href="#"><img src="images/train/Cii9EFZw-n2IdcknAAAWy1znY7MAABCTQG1hlYAABbj820.jpg" alt=""/></a></dd>
+            </dl>
+        </li>
+
+
+    </div>
+</div>
+<div class="content_banner louceng">
+    <div class="content_b1 h">
+        <div class="content_tele">
+            <p>客户服务电话:</p>
+
+            <h3>4007-999-999</h3>
+        </div>
+    </div>
+</div>
+<div class="tab h">
+    <div class="l1"></div>
+    <div class="l2"></div>
+    <div class="l3"></div>
+    <div class="l4"></div>
+</div>
+<div class="tab_banner h"></div>
+<div class="info h">
+    <p>途牛客服中心位于南京市 来电显示为 025-86859999、025-85776596、025-69609986 或 025-69609987</p>
+
+    <p>北京途牛国际旅行社有限公司，旅行社业务经营许可证编号：L-BJ-CJ00144 上海途牛国际旅行社有限公司，旅行社业务经营许可证编号:L-SH-CJ00107</p>
+
+    <p>
+        <a href="#">关于我们</a>
+        <a href="#">Investor Relations</a>
+        <a href="#">联系我们</a>
+        <a href="#">投诉建议</a>
+        <a href="#">广告服务</a>
+        <a href="#">旅游券</a>
+        <a href="#" style="color:red">途牛招聘</a>
+        <a href="#">隐私保护</a>
+        <a href="#">免责声明</a>
+        <a href="#">旅游度假资质</a>
+        <a href="#">主题旅游</a>
+        <a href="#">用户协议</a>
+        <a href="#">网站地图</a>
+        <a href="#">UEIP</a>
+        <a href="#">帮助中心</a>
+    </p>
+
+    <p>
+        Copyright &copy; 2006-2017 南京途牛科技有限公司 Tuniu.com | 营业执照 | ICP证:豫B2-20130006 | 豫ICP备:12009060号 | 北京旅游网
+    </p>
+</div>
+<div class="join">
+    <div class="img1"></div>
+    <div class="img2"></div>
+    <div class="img3"></div>
+</div>
+<div class="shopShow h">
+    <p>最新预定:6分钟前用户***516870预定&lt;厦门鼓浪屿双飞4日游&gt;半跟团半自助，1晚鼓浪屿2晚岛内舒适酒店，0购物0自费，含海边自助下午茶和鼓浪屿特色晚餐，享海边骑行 7分钟前用户</p>
+</div>
+<div class="copyright">
+    <ul>
+        <li><a href="#">
+            <img src="images/train/chengxin.png" alt=""/>
+        </a></li>
+        <li><a href="#">
+            <img src="images/train/buliang.png" alt=""/>
+        </a></li>
+        <li><a href="#">
+            <img src="images/train/cata.png" alt=""/>
+        </a></li>
+        <li><a href="#">
+            <img src="images/train/chengxinOne.png" alt=""/>
+        </a></li>
+        <li><a href="#">
+            <img src="images/train/3acomp.png" alt=""/>
+        </a></li>
+        <li><a href="#">
+            <img src="images/train/dianziyingye.png" alt=""/>
+        </a></li>
+        <li><a href="#">
+            <img src="images/train/wangluo.png" alt=""/>
+        </a></li>
+        <li><a href="#">
+            <img src="images/train/huiyuan.png" alt=""/>
+        </a></li>
+    </ul>
+</div>
+<div class="bottom clearfix">
+    <div class="fl">友情链接：</div>
+    <div class="fr bottom2"><a target="_blank" href="http://www.dfyoo.com/">笛风假期</a><a target="_blank"
+                                                                                       href="http://www.tuniu.com/vblog/">途牛微博客</a><a
+            target="_blank" href="http://www.jdair.net/">首都航空</a><a target="_blank"
+                                                                    href="http://travel.163.com/">网易旅游</a><a
+            target="_blank" href="http://travel.ce.cn/">中国经济网旅游</a><a href="http://lvyou.baidu.com/"
+                                                                      target="blank">百度旅游</a><a target="_blank"
+                                                                                                href="http://travel.people.com.cn/">人民网旅游</a><a
+            target="_blank" href="http://cn.made-in-china.com/">中国制造网</a><a target="_blank"
+                                                                            href="http://www.51766.com/">51766旅游网</a><a
+            target="_blank" href="http://www.xiulv.com/">成都青年旅行社</a><a target="_blank"
+                                                                       href="http://www.cncn.com/">欣欣旅游网</a><a
+            target="_blank" href="http://www.lvmama.com/">驴妈妈旅游网</a><a target="_blank"
+                                                                       href="http://www.iqiyi.com/lvyou/">奇艺旅游</a><a
+            target="_blank" href="http://www.lavago.com/">拉拉勾旅游网</a><a target="_blank" href="http://www.mipang.com/">米胖旅游网</a><a
+            target="_blank" href="http://www.baicheng.com/">百程旅行网</a><a target="_blank" href="http://www.xjtour.com/">新疆旅游</a><a
+            target="_blank" href="http://www.kuxun.cn/">酷讯旅游</a>
+        <a target="_blank" href="http://www.wed114.cn/">wed114结婚网</a><a target="_blank"
+                                                                        href="http://www.igo.cn/">新通留学网</a><a
+                target="_blank" href="http://www.taoche.com/">二手车</a><a target="_blank"
+                                                                        href="http://www.qianzhengdaiban.com/">中国签证资讯网</a><a
+                target="_blank" href="http://www.19lou.com/">19楼</a><a target="_blank"
+                                                                       href="http://www.tujia.com/">途家网</a>
+
+        <div style="float:right" onclick="$('javascript:;unshow_tab').show();$('javascript:;show_tab').hide();"><a href="javascript:void(0);">更多</a>
+        </div>
+    </div>
+    <div id="unshow_tab" style="display:none"><a target="_blank" href="http://www.dfyoo.com/">笛风假期</a><a target="_blank"
+                                                                                                         href="http://www.tuniu.com/vblog/">途牛微博客</a><a
+            target="_blank" href="http://www.jdair.net/">首都航空</a><a target="_blank"
+                                                                    href="http://travel.163.com/">网易旅游</a><a
+            target="_blank" href="http://travel.ce.cn/">中国经济网旅游</a><a href="http://lvyou.baidu.com/"
+                                                                      target="blank">百度旅游</a><a target="_blank"
+                                                                                                href="http://travel.people.com.cn/">人民网旅游</a><a
+            target="_blank" href="http://cn.made-in-china.com/">中国制造网</a><a target="_blank"
+                                                                            href="http://www.51766.com/">51766旅游网</a><a
+            target="_blank" href="http://www.xiulv.com/">成都青年旅行社</a><a target="_blank"
+                                                                       href="http://www.cncn.com/">欣欣旅游网</a><a
+            target="_blank" href="http://www.lvmama.com/">驴妈妈旅游网</a><a target="_blank"
+                                                                       href="http://www.iqiyi.com/lvyou/">奇艺旅游</a><a
+            target="_blank" href="http://www.lavago.com/">拉拉勾旅游网</a><a target="_blank" href="http://www.mipang.com/">米胖旅游网</a><a
+            target="_blank" href="http://www.baicheng.com/">百程旅行网</a><a target="_blank" href="http://ww.xjtourw.com/">新疆旅游</a><a
+            target="_blank" href="http://www.kuxun.cn/">酷讯旅游</a>
+        <a target="_blank" href="http://www.wed114.cn/">wed114结婚网</a><a target="_blank"
+                                                                        href="http://www.igo.cn/">新通留学网</a><a
+                target="_blank" href="http://www.taoche.com/">二手车</a><a target="_blank"
+                                                                        href="http://www.qianzhengdaiban.com/">中国签证资讯网</a><a
+                target="_blank" href="http://www.19lou.com/">19楼</a><a target="_blank"
+                                                                       href="http://www.tujia.com/">途家网</a><a
+                target="_blank" href="http://www.tuan800.com/">团购</a><a target="_blank" href="http://www.yododo.com/">游多多自助游</a>
+        <a target="_blank" href="http://www.xcar.com.cn/">爱卡汽车</a><a href="http://www.onlylady.com/"
+                                                                     target="_blank">女人志</a><a target="_blank"
+                                                                                               href="http://www.tiexue.net/">铁血军事</a><a
+                target="_blank" href="http://train.tuniu.com/">2013火车时刻表</a><a target="_blank"
+                                                                               href="http://www.keyunzhan.com/">客运站</a><a
+                target="_blank" href="http://www.lvye.cn/">绿野户外网</a><a target="_blank" href="http://www.5iucn.com/">吾爱旅游网</a><a
+                target="_blank" href="http://www.huoche.net/">火车时刻表</a><a target="_blank"
+                                                                          href="http://www.youbian.com/">邮编查询</a><a
+                target="_blank" href="http://www.chinasspp.com/">中国时尚品牌网</a><a target="_blank"
+                                                                               href="http://www.mafengwo.cn/">蚂蜂窝旅游攻略</a><a
+                target="_blank" href="http://www.zhuna.cn/">住哪网</a><a target="_blank"
+                                                                      href="http://www.baike.com/">互动百科</a><a
+                target="_blank" href="http://www.5fen.com/">5分旅游网</a><a href="http://www.qyer.com/"
+                                                                        target="_blank">穷游网</a><a
+                href="http://www.aoyou.com/" target="_blank">遨游旅游网</a><a href="http://www.kongfz.com/" target="_blank">孔夫子旧书网</a><a
+                href="http://www.tieyou.com/" target="_blank">火车票</a><a target="_blank"
+                                                                        href="http://china.makepolo.com/">马可波罗网</a><a
+                target="_blank" href="http://www.becod.com/">百酷住宿预定</a><a target="_blank" href="http://www.tianqi.com/">天气预报15天查询</a><a
+                target="_blank" href="http://www.cct.cn/">康辉旅游</a><a target="_blank"
+                                                                     href="http://www.tuniu.com/corp/links.shtml">更多...</a>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    var hotticketT =document.getElementById("hotticketT");
+    var oNav = $('#LoutiNav');//导航壳
+    var aNav = oNav.find('li');//导航
+    var aDiv = $('.louceng');//楼层
+    //回到顶部
+    $(window).scroll(function () {
+        var winH = $(window).height();//可视窗口高度
+        var iTop = $(window).scrollTop();//鼠标滚动的距离
+
+        if (iTop >= $('#header').height()) {
+            oNav.fadeIn();
+            //鼠标滑动式改变
+            aDiv.each(function () {
+                if (winH + iTop - $(this).offset().top > winH / 2) {
+                    aNav.removeClass('active');
+                    aNav.eq($(this).index()).addClass('active');
+                }
+            })
+        } else {
+            oNav.fadeOut();
+
+        }
+    })
+
+    //点击回到当前楼层
+    aNav.click(function () {
+        var t = aDiv.eq($(this).index()).offset().top;
+        $('body,html').animate({"scrollTop": t}, 1000);
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+
+
+    $(function () {
+        $(".product a").mouseover(function () {
+            $(this).css({"background":"rgba(0,0,0,0.1)"});
+        });
+        $(".product a").mouseout(function () {
+            $(this).css({"backgroundColor":""});
+        });
+    });
+</script>
+<script src="js/train/placeholderTypewriter.js"></script>
+<script type="text/javascript">
+    $('#getCont').placeholderTypewriter({
+        text: ["七彩云南，梦幻丽江", "黄金海岸，激情日照", "东方古都，长城故乡", "多情山水，浪漫之都","乐山乐水乐其中","福山福水福州游","拥抱碧海蓝天", "畅游五湖四海", "皮皮虾我们走"]
+    });
+</script>

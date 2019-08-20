@@ -1,0 +1,106 @@
+
+*{
+    margin:0;
+    padding:0
+}
+#yt{
+    width:100%;
+    height:650px;
+    margin:20px  auto;
+}
+ .tu{
+    margin:10px auto ;
+}
+.tu>img{
+    width:180px;
+    height:100px;
+    margin-left:100px;
+}
+ .login-bj{
+    width: 100%;
+    height:550px;
+    background:url(../image/login/Cii_J1zvTWeIBi5TAAXW2QtTU5YAAGfaQIJYFwABdbx92.jpeg);
+    background-size:100% 100%;
+    position: relative;
+}
+ .login{
+    background:rgba(255,255,255,0.8);
+    position: absolute;
+    top:90px;
+    right:70px;
+    width:320px;
+    height:320px;
+    margin-right:100px;
+}
+ .login p:not(:last-child){
+    width:300px;
+    height:40px;
+    padding:0 10px;
+    line-height:40px;
+}
+ .login p:first-child{
+    color:#4CBF00;
+    font-weight:bold;
+}
+ .login p:nth-child(2) input,.login p:nth-child(3) input{
+    display: block;
+    width:250px;
+    height:30px;
+    margin:2.5px;
+    border:1px solid #dddddd;
+    padding-left:35px;
+}
+.login p:nth-child(2) input{
+    background:url(../image/login/yhm.png) no-repeat 3px 3.5px;
+    background-size:25px 25px;
+    vertical-align: middle;
+}
+.login p:nth-child(3) input{
+    background:url(../image/login/mm.png) no-repeat 3px 3.5px;
+    background-size:25px 25px;
+    vertical-align: middle;
+}
+button{
+    background:rgba(255,136,0,0.8);
+    border:1px solid transparent;
+    width:280px;
+    margin-left:10px;
+    height:35px;
+    color:#fff;
+    font-size:18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+
+}
+.login p  a{
+    font-size:13px;
+    color:#000000;
+}
+.login p:nth-child(7){
+    height:25px;
+    line-height: 25px;
+}
+.login p:last-child span{
+    width:65px;
+    height:45px;
+    line-height:45px;
+    vertical-align: middle;
+    padding:0 15px 0 0;
+}
+.login p:last-child  span:first-child{
+    background:url(../image/login/weixinv2.png) no-repeat 10px 10px;
+    background-size:20px 20px ;
+}
+.login p:last-child  span:nth-child(2){
+    background:url(../image/login/qqv2.png) no-repeat 10px 10px;
+    background-size:20px 20px ;
+}
+.login p:last-child  span:nth-child(3){
+    background:url(../image/login/weibov2.png) no-repeat 10px 10px;
+    background-size:20px 20px ;
+}
+.login p:last-child  span:nth-child(4){
+    background:url(../image/login/cardv2.png) no-repeat 5px 10px;
+    background-size:20px 20px ;
+}

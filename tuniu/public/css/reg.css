@@ -1,0 +1,60 @@
+#head{
+    height:100px;
+}
+#head img{
+    width:60px;
+    margin-left:90px;
+    margin-top:10px;
+}
+#back{
+    width:100%;
+    height:550px;
+    background:url(../image/login/Cii_J1zvTWeIBi5TAAXW2QtTU5YAAGfaQIJYFwABdbx92.jpeg);
+}
+
+#reg{
+    width:400px;
+    height:300px;
+    position:absolute;
+    background:cadetblue;
+    top:50%;
+    left:80%;
+    margin:-203px 0 0 -200px;
+}
+
+#reg tabletr{
+    width:300px;
+    font-size:18px;
+    
+}
+table{
+    margin-top:10px;
+}
+#reg table td{
+    width:100px;
+    font-size:18px;
+    color:rebeccapurple
+}
+input{
+    height:30px;
+    margin-top:10px;
+    margin-bottom:5px;
+}
+#btn{
+    text-align: center;
+}
+
+#btn button{
+    height:30px;
+    font-size:18px;
+  background-color:green;
+}
+
+table tr td p{
+    font-size:12px;
+}
+tr a{
+    color:yellowgreen;
+    font-family:"小黑"
+}
+
